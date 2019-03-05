@@ -10,32 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_20_210219) do
+ActiveRecord::Schema.define(version: 2019_01_22_032859) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "puzzles", force: :cascade do |t|
-    t.string "imageUrl"
-    t.integer "score_id"
+  create_table "images", force: :cascade do |t|
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "scores", force: :cascade do |t|
-    t.integer "game_score"
+  create_table "puzzles", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "image_id"
+    t.boolean "complete"
     t.integer "user_id"
-    t.integer "score_id"
+    t.string "tiles"
+  end
+
+  create_table "scores", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "puzzle_id"
+    t.boolean "current"
+    t.integer "time"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
     t.string "avatar"
-    t.integer "score_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

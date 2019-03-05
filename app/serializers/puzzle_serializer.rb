@@ -1,5 +1,4 @@
 class PuzzleSerializer < ActiveModel::Serializer
-  has_many :scores
-  has_many :users
-  attributes :id, :imageUrl, :score_id
+  belongs_to :image
+  attributes :id, :tiles, :image_id, :complete
 end

@@ -10,10 +10,29 @@ def show
   render json: @score
 end
 
+def update
+  find_score
+  if @score.update(score_params)
+    render json: @score
+  else
+    render json: @puzzle.errors, status: :unprocessable_entity
+  end
+end
+
+def create
+  @score=Score.create(score_params)
+  if @score
+    render json: @score
+  else
+    render json: @puzzle.errors, status: :unprocessable_entity
+  end
+
+end
+
 private
 
 def score_params
-  params.permit(:game_score)
+  params.require(:score).permit(:id,:time,:puzzle_id,:current)
 end
 
 def find_score

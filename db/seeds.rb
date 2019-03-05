@@ -8,53 +8,13 @@ require 'faker'
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
-  User.create(
-    username: Faker::Friends.character, password: 'hi', avatar: Faker::Fillmurray.image
-  )
-  User.create(
-    username: Faker::Friends.character, password: 'hi', avatar: Faker::Fillmurray.image
-  )
-  User.create(
-    username: Faker::Friends.character, password: 'hi', avatar: Faker::Fillmurray.image
-  )
-  User.create(
-    username: Faker::Friends.character, password: 'hi', avatar: Faker::Fillmurray.image
-  )
-
-
-    Puzzle.create(
-      imageUrl: Faker::Placeholdit.image,
-      score_id: 2
-    )
-    Puzzle.create(
-      imageUrl: Faker::Placeholdit.image,
-      score_id: 3
-    )
-    Puzzle.create(
-      imageUrl: Faker::Placeholdit.image,
-      score_id: 0
-    )
-
-
-  Score.create(
-    user_id: 1,
-    puzzle_id: 1,
-    game_score: 20
-  )
-  Score.create(
-    user_id: 2,
-    puzzle_id: 2,
-    game_score: 10
-  )
-  Score.create(
-    user_id: 3,
-    puzzle_id: 3,
-    game_score: 50
-  )
-  Score.create(
-    user_id: 0,
-    puzzle_id: 0,
-    game_score: 4
-  )
-
+  img1=Image.create(image_url:'./1.jpg')
+  img2=Image.create(image_url:'./2.jpg')
+  img3=Image.create(image_url:'./3.jpg')
+  img4=Image.create(image_url:'./4.jpg')
+  img5=Image.create(image_url:'./5.jpg')
+  img6=Image.create(image_url:'./6.jpg')
+  img7=Image.create(image_url:'./7.jpg')
+  img8=Image.create(image_url:'./8.jpg')
+  img9=Image.create(image_url:'./9.jpg')
+  img10=Image.create(image_url:'./10.jpg')

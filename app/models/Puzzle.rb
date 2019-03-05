@@ -1,4 +1,5 @@
 class Puzzle < ApplicationRecord
   has_many :scores
-  has_many :users, through: :scores
+  belongs_to :user
+  belongs_to :image
 end
