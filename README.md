@@ -1,25 +1,18 @@
-# README
+Pict Puzzle is puzzle solving app built with Ruby on Rails and ReactJS. Solve puzzles against the clock!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository contains the Ruby on Rails backend. You can find the ReactJS front end [here](https://github.com/skyfox93/puzzler)
 
-Things you may want to cover:
 
-* Ruby version
+![Puzzler.gif](/public/Puzzler.gif)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# mod4-backend
+### Run This Example Locally
++ Clone this repository
++ Clone the backend repository
++ Navigate to the backend repository and run:
+ * `bundle install`
+ * `rails db:create`
+ *  `rails db:migrate`
+ * `rails s`
++ Navigate to this repository and run:
+ * `npm install`
+ * `PORT=3001 npm start`
